@@ -5,6 +5,7 @@ define(["underscore"], function(_) {
      * convert query string to object
      */
     module.to_object = function(query) {
+        var name, value;
         var result = {};
         _.each(query.split(";"), function(fragment) {
             name = fragment.split("=")[0];
