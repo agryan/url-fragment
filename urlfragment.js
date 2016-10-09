@@ -4,7 +4,7 @@
     /**
      * convert fragment string to object
      */
-    module.to_object = function(fragment) {
+    module.toJSON = function(fragment) {
         var name, value;
         var result = {};
         _.each(fragment.split(";"), function(pair) {
@@ -18,7 +18,7 @@
     /**
      * convert object to fragment string
      */
-    module.to_fragment = function(data) {
+    module.toString = function(data) {
         var pairs = _.map(data, function(value, key) {
             return [key, value].join("=");
         });
