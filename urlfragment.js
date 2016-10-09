@@ -1,4 +1,4 @@
-define(["underscore"], function(_) {
+(function() {
     var module = {};
 
     /**
@@ -25,5 +25,12 @@ define(["underscore"], function(_) {
         return fragments.join(";");
     };
 
-    return module;
-});
+	// Support AMD or standard import
+	if (typeof define === 'function' && define.amd) {
+		define(["underscore"], function(_) {
+			return module;
+		});
+	} else {
+		window.urlfragment = module;
+	}
+})();
