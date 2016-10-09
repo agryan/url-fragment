@@ -10,8 +10,8 @@ define(["QUnit", "urlfragment"], function(QUnit, urlfragment) {
         });
 
 
-        QUnit.test("to_query", function(assert) {
-            actual = urlfragment.to_query({
+        QUnit.test("to_fragment", function(assert) {
+            actual = urlfragment.to_fragment({
                 date: "20160101",
                 region: "globalocean"
             });

@@ -2,23 +2,23 @@
     var module = {};
 
     /**
-     * convert query string to object
+     * convert fragment string to object
      */
-    module.to_object = function(query) {
+    module.to_object = function(fragment) {
         var name, value;
         var result = {};
-        _.each(query.split(";"), function(fragment) {
-            name = fragment.split("=")[0];
-            value = fragment.split("=")[1];
+        _.each(fragment.split(";"), function(pair) {
+            name = pair.split("=")[0];
+            value = pair.split("=")[1];
             result[name] = value;
         }, this);
         return result;
     };
 
     /**
-     * convert object to query string
+     * convert object to fragment string
      */
-    module.to_query = function(data) {
+    module.to_fragment = function(data) {
         var fragments = _.map(data, function(value, key) {
             return [key, value].join("=");
         });
