@@ -6,14 +6,14 @@ Micro JavaScript module to make converting between URL strings and JavaScript ob
 
 To convert URL fragments from strings to objects.
 
-```
+```javascript
 urlfragment.to_object('a=1;b=2');
 { 'a': '1', 'b': '2' }
 ```
 
 Or from objects to strings.
 
-```
+```javascript
 urlfragment.to_fragment({a: 1, b: 2});
 "a=1;b=2"
 ```
