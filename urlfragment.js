@@ -4,10 +4,17 @@
     /**
      * convert fragment string to object
      */
-    module.toJSON = function(fragment) {
-        var name, value;
+    module.toJSON = function(fragment, options) {
+        var name, value, delimiter;
         var result = {};
-        _.each(fragment.split(";"), function(pair) {
+
+		if (typeof options !== "undefined") {
+			delimiter = options.delimiter;
+		} else {
+			delimiter = "&";
+		}
+
+        _.each(fragment.split(delimiter), function(pair) {
             name = pair.split("=")[0];
             value = pair.split("=")[1];
             result[name] = value;
@@ -18,11 +25,15 @@
     /**
      * convert object to fragment string
      */
-    module.toString = function(data) {
+    module.toString = function(data, options) {
+		var delimiter = "&";
+		if (typeof options !== "undefined") {
+			delimiter = options.delimiter;
+		}
         var pairs = _.map(data, function(value, key) {
             return [key, value].join("=");
         });
-        return pairs.join(";");
+        return pairs.join(delimiter);
     };
 
     // Support AMD or standard import
