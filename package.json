@@ -1,0 +1,23 @@
+{
+  "name": "urlfragment",
+  "version": "0.1.0",
+  "description": "A micro module to convert URL fragments",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agryan/url-fragment.git"
+  },
+  "author": "Andrew Ryan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agryan/url-fragment/issues"
+  },
+  "homepage": "https://github.com/agryan/url-fragment#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-qunit": "^1.2.0"
+  }
+}
