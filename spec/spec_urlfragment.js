@@ -1,9 +1,9 @@
-define(["QUnit", "url"], function(QUnit, url) {
+define(["QUnit", "urlfragment"], function(QUnit, urlfragment) {
     var actual, expected;
 
-    QUnit.module("url", function(hooks) {
+    QUnit.module("urlfragment", function(hooks) {
         QUnit.test("to_object", function(assert) {
-            actual = url.to_object("date=20160101;region=globalocean");
+            actual = urlfragment.to_object("date=20160101;region=globalocean");
             expected = {date: "20160101",
                         region: "globalocean"};
             assert.deepEqual(actual, expected);
@@ -11,7 +11,7 @@ define(["QUnit", "url"], function(QUnit, url) {
 
 
         QUnit.test("to_query", function(assert) {
-            actual = url.to_query({
+            actual = urlfragment.to_query({
                 date: "20160101",
                 region: "globalocean"
             });

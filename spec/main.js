@@ -19,7 +19,7 @@ requirejs.config({
 });
 
 requirejs(['QUnit',
-           'spec/spec_url'], function(QUnit) {
+           'spec/spec_urlfragment'], function(QUnit) {
     QUnit.load();
     QUnit.start();
 });
