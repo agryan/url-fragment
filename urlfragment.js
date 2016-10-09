@@ -19,10 +19,10 @@
      * convert object to fragment string
      */
     module.to_fragment = function(data) {
-        var fragments = _.map(data, function(value, key) {
+        var pairs = _.map(data, function(value, key) {
             return [key, value].join("=");
         });
-        return fragments.join(";");
+        return pairs.join(";");
     };
 
 	// Support AMD or standard import
