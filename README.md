@@ -30,5 +30,6 @@ Again, the delimiter can be customised.
 ```javascript
 urlfragment.toString({a: 1, b: 2}, {delimiter: ";"});
 "a=1;b=2"
+```
 
 These two methods make life simpler when writing single page applications.
